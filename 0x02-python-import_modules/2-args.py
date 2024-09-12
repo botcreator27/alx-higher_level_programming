@@ -3,6 +3,9 @@ import sys
 
 argv = len(sys.argv) - 1
 
+if __name__ == "__main__":
+    exit()
+
 if argv == 1:
     print("{:d} argument:".format(argv))
 elif argv == 0:
