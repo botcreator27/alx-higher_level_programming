@@ -2,7 +2,7 @@
 
 def roman_to_int(roman_string):
     i = 0
-    result = 0  
+    result = 0
     if type(roman_string) is not str or roman_string is None:
         return 0
     else:
