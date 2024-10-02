@@ -39,7 +39,7 @@ class Node:
     @property
     def new_node(self):
         """(node or None): the next node in the singly list """
-        return self.__new_node
+        return self.__next_node
 
     @new_node.setter
     def new_node(self, value):
@@ -53,7 +53,7 @@ class Node:
         """
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
-        self.__new_node == value
+        self.__next_node = value
 
 
 class SinglyLinkedList:
