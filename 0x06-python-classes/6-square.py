@@ -16,26 +16,15 @@ class Square:
 
         Args:
             size: size of square.
-            position: tuple os 2 positive ints.
+            position: tuple of 2 positive ints.
         """
         self.__size = size
         self.__position = position
-
-    def area(self):
-        """ Returns the sq are of the square
-
-            Returns: the sq area
-        """
-        return self.__size ** 2
 
     @property
     def size(self):
         """Returns the size of the squre which is private"""
         return self.__size
-    @property
-    def position(self):
-        """Returns position attribute"""
-        return self.__position
 
     @size.setter
     def size(self, value):
@@ -55,26 +44,46 @@ class Square:
         else:
             self.__size = value
 
+    def area(self):
+        """Returns the sq area of the square
+
+            Returns: the sq area
+        """
+        return self.__size ** 2
+
+    @property
+    def position(self):
+        """
+        Returns position attribute
+        """
+        return self.__position
+
     @position.setter
     def position(self, value):
         """
         property setter for position
-
         Args:
             value(tuple): position value
         Raises:
             TypeError: position must be a tuple of 2 positive integers
         """
-        if not isinstance(position, tuple) or if len(value) != 2:
+        if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) or if not isinstance(value[1], int):
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[0], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[1], int):
             raise TypeError("position must be a tuple of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def my_print(self):
-        """ prints size of the square with # """
+        """
+        prints size of the square with #
+ 
+        """
         if self.__size == 0:
             print()
         else:
