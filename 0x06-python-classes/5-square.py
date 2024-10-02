@@ -49,10 +49,7 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        """
-        prints size of the square with #
- 
-        """
+        """ prints size of the square with # """
         if self.__size == 0:
             print()
         for x in range(self.__size):
