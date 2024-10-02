@@ -51,7 +51,7 @@ class Node:
         Raises:
             TypeError: if new_node not of type node or none
         """
-        if not isinstance(value, Node) and value is not None:
+        if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
         self.__new_node == value
 
