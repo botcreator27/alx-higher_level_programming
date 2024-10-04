@@ -18,12 +18,11 @@ def add_integer(a, b=98):
         a(int): first number
         b(int): second number
 
+    Raises:
+        TypeError: if a, b are neither int nor float
+
     Returns:
         sum of int a and int b
-
-    Both a and b must be an int or float, else raise TypeError
-    If a and b are float they must be casted into integers
-    Function should be able to add neg integers
 
     Examples:
     >>> add_integer("1", 2)
@@ -50,5 +49,5 @@ def add_integer(a, b=98):
 
 if __name__ == "__main__":
     import doctest
-    doctest.testmod()
+    doctest.testfile("tests/0-add_integer.txt")
 

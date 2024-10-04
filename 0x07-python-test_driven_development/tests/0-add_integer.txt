@@ -1,0 +1,52 @@
+Welcome to the '0-add_integer test' module
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+basic usage:
+>>> add_integer(5, 2)
+7
+>>> add_integer(1)
+99
+
+for negative numbers:
+>>> add_integer(-1, 1)
+0
+
+>>> add_integer(-100)
+-2
+
+check for error handling:
+
+when type other int or float is passed:
+
+>>> add_integer('1', 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(1, "2")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("hello", "hi")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+for float values:
+
+>>> add_integer(100.5, 1)
+101
+
+>>> add_integer(5, 2.25)
+7
+
+>>> add_integer(5.55)
+103
+
+>>> add_integer(float('NaN'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
