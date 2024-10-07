@@ -13,10 +13,11 @@ def text_indentation(text):
     Raises:
         TypeError: text must be a string
     """
-    if type(text) is not str:
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     result = []
+    #text = text.strip("\n")
 
     for char in text:
         if char in ".?:":
@@ -28,4 +29,4 @@ def text_indentation(text):
             result.append(char)
 
     text = ''.join(result)
-    print("{}".format(text))
+    print("{}".format(text), end="")
