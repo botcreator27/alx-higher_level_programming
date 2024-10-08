@@ -5,6 +5,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """ test cases for max integer """
 
@@ -22,7 +23,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_not_int(self):
         """ test with int and str types """
-        data = [ 9, "hello", 'c', 10]
+        data = [9, "hello", 'c', 10]
         self.assertRaises(TypeError, max_integer, data)
 
     def test_empty(self):

@@ -17,7 +17,6 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     result = []
-    #text = text.strip("\n")
 
     for char in text:
         if char in ".?:":

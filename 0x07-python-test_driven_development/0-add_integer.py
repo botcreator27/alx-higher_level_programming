@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-""" 
-    this module defines a function that adds two intergers 
+"""
+    this module defines a function that adds two intergers
     Examples:
     >>> add_integer(1, 1)
     2
@@ -47,7 +47,7 @@ def add_integer(a, b=98):
         b = int(b)
     return ((a) + (b))
 
+
 if __name__ == "__main__":
     import doctest
     doctest.testfile("tests/0-add_integer.txt")
-

@@ -24,18 +24,18 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    if (not isinstance(matrix, list) or 
+    if (not isinstance(matrix, list) or
             not all(isinstance(row, list) for row in matrix)):
         raise TypeError("matrix must be a matrix (list of lists) " +
-                "of integers/floats")
+                        "of integers/floats")
     for row in matrix:
         if len(row) == 0:
             raise TypeError("matrix must be a matrix (list of lists)" +
-            "of integers/float")
+                            "of integers/float")
     for x in row:
         if not isinstance(x, int) and not isinstance(x, float):
             raise TypeError("matrix must be a matrix (list of lists)"
-            "of integers/float")
+                            "of integers/float")
 
     len_rows = []
     for row in matrix:
