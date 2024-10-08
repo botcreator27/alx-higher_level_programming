@@ -1,2 +1,3 @@
 def copy_list(l):
-    new_list = l[:]
+    if isinstance(l, list):
+       return l[:]
