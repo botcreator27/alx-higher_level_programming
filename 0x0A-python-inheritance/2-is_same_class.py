@@ -10,7 +10,8 @@ def is_same_class(obj, a_class):
         a_class: the class to be ckecked against
 
     Returns:
-        True for success, False for not an instance
+        True for success, False for not instance
         """
-
-    return isinstance(obj, a_class)
+    if type(obj) is a_class:
+        return True
+    return False
