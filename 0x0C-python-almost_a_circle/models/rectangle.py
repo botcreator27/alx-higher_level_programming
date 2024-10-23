@@ -114,3 +114,8 @@ class Rectangle(Base):
 
         for x in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
+
+    def to_dictionary(self):
+        """represents the class as a dict"""
+        return {"id": self.id, "size": self.width,
+                "x": self.x, "y": self.y}
