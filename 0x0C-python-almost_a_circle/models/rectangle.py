@@ -77,13 +77,13 @@ class Rectangle(Base):
         self.__y = value
 
     def update(self, *args, **kwargs):
-        """ 
+        """
         args assigns args to each atribute in the order listed in attributes
         kwargs assigns based on key
         """
         if args:
-            attribute = ["id", "_Rectangle__width",
-                            "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+            attribute = ["id", "_Rectangle__width", "_Rectangle__height",
+                         "_Rectangle__x", "_Rectangle__y"]
             for i, arg in enumerate(args):
                 if i < len(attribute):
                     setattr(self, attribute[i], arg)
