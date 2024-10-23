@@ -76,13 +76,28 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    def update(self, *args):
-        """ assigns args to each atribute in the order listed in attributes"""
-        attribute = ["id", "_Rectangle__width",
-                     "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
-        for i, arg in enumerate(args):
-            if i < len(attribute):
-                setattr(self, attribute[i], arg)
+    def update(self, *args, **kwargs):
+        """ 
+        args assigns args to each atribute in the order listed in attributes
+        kwargs assigns based on key
+        """
+        if args:
+            attribute = ["id", "_Rectangle__width",
+                            "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+            for i, arg in enumerate(args):
+                if i < len(attribute):
+                    setattr(self, attribute[i], arg)
+        for key, value in kwargs.items():
+            if key == 'id':
+                self.id = value
+            elif key == 'width':
+                self.__width = value
+            elif key == 'height':
+                self.__height = value
+            elif key == 'x':
+                self.__x = value
+            elif key == 'y':
+                self.__y = value
 
     def __str__(self):
         """prints out rectangle details"""
