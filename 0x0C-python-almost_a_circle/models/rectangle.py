@@ -76,6 +76,13 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def update(self, *args):
+        """ assigns args to each atribute in the order listed in attributes"""
+        attribute = ["id", "_Rectangle__width", "_Rectangle__height", "_Rectangle__x", "_Rectangle__y"]
+        for i, arg in enumerate(args):
+            if i < len(attribute):
+                setattr(self, attribute[i], arg)
+
     def __str__(self):
         """prints out rectangle details"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
