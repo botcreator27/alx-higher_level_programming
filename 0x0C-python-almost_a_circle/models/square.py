@@ -30,7 +30,7 @@ class Square(Rectangle):
         """setter for size"""
         self.width = value
         self.height = value
- 
+
     def __update(self, id=None, size=None, x=None, y=None):
         """private method to set attributes"""
         if id is not None:
