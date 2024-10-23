@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """ this module defines class square- a rectangle subclass"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
