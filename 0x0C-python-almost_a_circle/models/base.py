@@ -44,4 +44,4 @@ class Base:
         """ converts arg(json string) to obj"""
         if json_string is not None:
             return json.loads(json_string)
-        return "[]"
+        return []
