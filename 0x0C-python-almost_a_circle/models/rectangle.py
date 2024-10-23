@@ -48,7 +48,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-
     @property
     def x(self):
         """getter for x"""
@@ -79,8 +78,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """prints out rectangle details"""
-        print("[Rectangle] ({}) {}/{} -"
-            + "{width}/{height}".format(self.__id, self.__x, self.__y, self.__width, self.__height)
+        print("[Rectangle] ({}) {}/{} - {width}/{height}".format(
+                self.__id, self.__x, self.__y, self.__width, self.__height))
 
     def area(self):
         """ public mthod to compute area"""
